@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Uploader } from './components/Uploader'
 import { TimelapsePanel } from './components/TimelapsePanel'
+import { InstallButton } from './components/InstallButton'
 import { EFFECTS, type EffectId, type VideoSource } from './types'
 import { formatBytes, formatDuration } from './utils/format'
 
@@ -70,11 +71,14 @@ export default function App() {
             <span className="brand__tag">브라우저 비디오 에디터</span>
           </div>
         </div>
-        {source && (
-          <button type="button" className="btn btn--ghost" onClick={handleReset}>
-            새 영상 열기
-          </button>
-        )}
+        <div className="topbar__actions">
+          <InstallButton />
+          {source && (
+            <button type="button" className="btn btn--ghost" onClick={handleReset}>
+              새 영상 열기
+            </button>
+          )}
+        </div>
       </header>
 
       {!source ? (

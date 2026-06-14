@@ -50,6 +50,17 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.install-btn {
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
 .brand {
   display: flex;
   align-items: center;
